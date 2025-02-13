@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .card{
+      width: 42rem ;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 20px 20px 30px #414141;
+      display: flex;
+      
+    }
+    
+    .name{
+      letter-spacing: 6px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .heading-name{
+      font-size: 25px;
+    }
+    .btn{
+      padding: 4px;
+      
+
+    }
+    .details{
+      padding:30px 20px;
+      justify-content: space-between;
+    }
+    .price{
+      font-size: 30px;
+      color: greenyellow;
+    }
+
+    
+    @media only screen and (max-width: 600px) {
+      .image img{
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        object-position:  center;
+  
+      }
+      .card{
+        width: 82rem ;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 20px 20px 30px #414141;
+        display: flex;
+        flex-direction: column;
+        scale: 0.7;
+      }
+      .heading-name{
+        font-size: 30px;
+      }
+      .btn{
+        padding: 4px;
+        scale: 1.2;
+        
+  
+      }
+      .details{
+        align-items: center;
+      }
+     
+    }
+  </style>
+    
+
+  
+</head>
+<body >
+  <div class="card">
+    <div class="image">
+
+      <img src="./images/image-product-desktop.jpg" alt="image" class=" desktopview" >
+      <!-- <img src="./images/image-product-mobile.jpg" alt="image" class=" mobileview" > -->
+    </div>
+    <div class="details flex flex-col gap-5 p-5">
+      <span class=" name">Perfume</span>
+      <b class=" heading-name">Gabrielle Essence Eau De Parfum</b>
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+      <span class="price">$149.99 <sup><strike>$169.99</strike></sup></span>
+      <button class="btn bg-green-600 text-[#fff] rounded-md w-52 p-5 hover:bg-green-500 hover:text-[#000]">Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
